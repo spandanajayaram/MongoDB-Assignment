@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    div(style='text-align: center')
+      h2 MongoDB &nbsp;&nbsp;Prototype
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    br 
+    div 
+      table
+        tr
+          div
+            form(action='/searchItem')
+              .form-group
+                  label(for='searchString')
+                  input(type='text', name='searchString', class='form-control', id='searchString' placeholder='Enter a search text')
+                  button.btn.btn-default Search 
+        tr
+          block list
+        tr
+          td 
+            block content

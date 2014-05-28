@@ -1,0 +1,51 @@
+extends layout
+
+var book
+
+block list
+  br
+  br
+  table
+    tr
+      td 
+        a(href='items') TV 
+      td
+        a(href='book') Books 
+      td 
+        a(href='cosmetic') Cosmetic
+      td 
+        a(href='ref') Refrigerator
+    
+    
+block content
+    table
+      thead
+        tr 
+            th
+            th #{title}
+        th    
+          br
+        tr
+            th Title &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;  
+            th Author &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            th Price &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+            th ISBN
+         br 
+      tbody
+        each val in book
+          tr
+            td #{val.itemInfo.title}
+            td #{val.itemInfo.author}
+            td #{val.itemInfo.price}
+            td #{val.itemInfo.ISBN}
+          br
+
+
+
+  
+
+  
+
+
+
+
